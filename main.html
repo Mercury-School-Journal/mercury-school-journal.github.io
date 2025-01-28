@@ -1,0 +1,95 @@
+<div class="container-fluid">
+    <div id="headerMenu">
+        <button class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+            <i class="fas fa-bars"></i> <!-- Ikona trzech kresek (hamburger menu) -->
+        </button>
+        <!-- Offcanvas menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu"
+            aria-labelledby="offcanvasMenuLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasMenuLabel">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div id="headerMenu2">
+                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/dashboard.htm" data-bs-dismiss="offcanvas">Strona główna</a>
+                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/grades.htm" data-bs-dismiss="offcanvas">Oceny</a>
+                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/schedule.htm" data-bs-dismiss="offcanvas">Plan lekcji</a>
+                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/notes.htm" data-bs-dismiss="offcanvas">Uwagi</a>
+                    <div class="ms-auto dropdown">
+                        <a href="#"
+                            class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/pawi1.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong class="userName"></strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">Ustawienia</a></li>
+                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                            <li><a class="dropdown-item" href="#">Wiadomości</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item logoff" href="#">Wyloguj</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebarMenu" class="col-md-0 col-lg-3 d-lg-block bg-dark sidebar collapse position-relative">
+            <div class="position-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white load-content" href="#" data-url="subpages/dashboard.htm">
+                            Strona główna
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white load-content" href="#" data-url="subpages/grades.htm">
+                            Oceny
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white load-content" href="#" data-url="subpages/schedule.htm">
+                            Plan lekcji
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white load-content" href="#" data-url="subpages/notes.htm">
+                            Uwagi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- HR above Dropdown -->
+            <hr class="hr-bottom">
+            <!-- Dropdown -->
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/pawi1.png" alt="" width="32" height="32"
+                        class="rounded-circle me-2">
+                    <strong class="userName"></strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                    <li><a class="dropdown-item" href="#">Ustawienia</a></li>
+                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                    <li><a class="dropdown-item" href="#">Wiadomości</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item logoff" href="#"">Wyloguj</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Main content area -->
+        <main class="ms-sm-auto col-lg-9 px-md-4 d-flex align-items-center justify-content-center" id="content-area">
+        </main>
+    </div>
+</div>
+<script src="js/main.js"></script>

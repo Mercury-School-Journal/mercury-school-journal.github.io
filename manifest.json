@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Mercury",
+  "short_name": "Mercury",
+  "version": "io.mercury-school-journal.mercury",
+  "description": "An application for managing the Mercury journal (frontend)",
+  "author": "Pawil",
+  "icons": [],
+  "start_url": "index.html"
+}
