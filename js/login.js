@@ -20,7 +20,7 @@ $(document).ready(() => {
     if(localStorage.getItem("api")!= null && sessionStorage.getItem("isOnline") == null){
         let api = atob(localStorage.getItem("api"));
         $.ajax({
-            url: api+":10800/api/ping",
+            url: api+"/api/ping",
             type: "GET",
             success: ()=>{
                 $("#loginServer").val(api);
@@ -37,7 +37,7 @@ $(document).ready(() => {
             password: $('#loginPassword').val()
         };
         $.ajax({
-            url: $("#loginServer").val() + ':10800/api/login',
+            url: $("#loginServer").val() + '/api/login',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(data),
