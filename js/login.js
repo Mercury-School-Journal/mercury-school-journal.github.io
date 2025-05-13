@@ -29,7 +29,7 @@ $(document).ready(() => {
         });
     }
     else if(cordova.platformId === 'browser')
-        $("#loginServer").val(window.location.protocol+"//"+window.location.hostname);
+        $("#loginServer").val(window.location.protocol+"//"+window.location.hostname+":10800");
     $('#loginForm').on('submit',(event)=> {
         event.preventDefault();
         var data = {

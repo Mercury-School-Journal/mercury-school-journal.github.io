@@ -1,1 +1,279 @@
-<h2>Plan Lekcji</h2>
+<!-- CSS wspólny -->
+<style>
+
+    .day-column {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .subject {
+        margin: 5px 0;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+    }
+
+    .hour {
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+    .subject {
+        margin: 5px 0;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+    }
+
+    .hour {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+        .subject {
+            padding: 5px;
+            font-size: 12px;
+        }
+
+        .hour {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<!-- TABELA (desktop) -->
+<div class="container mt-5 px-4 d-none d-md-block">
+    <div class="d-md-block">
+        <h2>Plan lekcji</h2>
+        <div class="table-responsive">
+            <table class="table w-100">
+                <thead>
+                    <tr>
+                        <th>Godzina</th>
+                        <th>Poniedziałek</th>
+                        <th>Wtorek</th>
+                        <th>Środa</th>
+                        <th>Czwartek</th>
+                        <th>Piątek</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="hour">0</td>
+                        <td class="subject"></td>
+                        <td class="subject">Historia</td>
+                        <td class="subject"></td>
+                        <td class="subject">Matematyka</td>
+                        <td class="subject"></td>
+                    </tr>
+                    <tr>
+                        <td class="hour">1</td>
+                        <td class="subject">Angielski</td>
+                        <td class="subject">Chemia</td>
+                        <td class="subject"></td>
+                        <td class="subject">Angielski</td>
+                        <td class="subject">Chemia</td>
+                    </tr>
+                    <tr>
+                        <td class="hour">2</td>
+                        <td class="subject">Biologia</td>
+                        <td class="subject">WF</td>
+                        <td class="subject">Fizyka</td>
+                        <td class="subject">Biologia</td>
+                        <td class="subject">WF</td>
+                    </tr>
+                    <tr>
+                        <td class="hour">3</td>
+                        <td class="subject">Historia</td>
+                        <td class="subject">Geografia</td>
+                        <td class="subject">Matematyka</td>
+                        <td class="subject">Historia</td>
+                        <td class="subject">Geografia</td>
+                    </tr>
+                    <tr>
+                        <td class="hour">4</td>
+                        <td class="subject">Chemia</td>
+                        <td class="subject">Polski</td>
+                        <td class="subject">Angielski</td>
+                        <td class="subject">Chemia</td>
+                        <td class="subject">Polski</td>
+                    </tr>
+                    <tr>
+                        <td class="hour">5</td>
+                        <td class="subject">WF</td>
+                        <td class="subject">Fizyka</td>
+                        <td class="subject">Biologia</td>
+                        <td class="subject">WF</td>
+                        <td class="subject"></td>
+                    </tr>
+                    <tr>
+                        <td class="hour">6</td>
+                        <td class="subject">Geografia</td>
+                        <td class="subject">Matematyka</td>
+                        <td class="subject">Historia</td>
+                        <td class="subject">Geografia</td>
+                        <td class="subject"></td>
+                    </tr>
+                    <tr>
+                        <td class="hour">7</td>
+                        <td class="subject">Polski</td>
+                        <td class="subject">Angielski</td>
+                        <td class="subject">Chemia</td>
+                        <td class="subject">Polski</td>
+                        <td class="subject"></td>
+                    </tr>
+                    <tr>
+                        <td class="hour">8</td>
+                        <td class="subject">Fizyka</td>
+                        <td class="subject">Biologia</td>
+                        <td class="subject">WF</td>
+                        <td class="subject">Fizyka</td>
+                        <td class="subject"></td>
+                    </tr>
+                    <tr>
+                        <td class="hour">9</td>
+                        <td class="subject">Matematyka</td>
+                        <td class="subject"></td>
+                        <td class="subject"></td>
+                        <td class="subject">Matematyka</td>
+                        <td class="subject"></td>
+                    </tr>
+                    <tr>
+                        <td class="hour">10</td>
+                        <td class="subject">Angielski</td>
+                        <td class="subject"></td>
+                        <td class="subject"></td>
+                        <td class="subject"></td>
+                        <td class="subject"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+
+<!-- AKORDEON (mobile) -->
+<div class="d-block d-md-none px-4">
+    <h2>Plan lekcji</h2>
+    <div class="accordion" id="accordionExample">
+        <!-- Pętla dni tygodnia -->
+        <!-- Poniedziałek -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMonday">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseMonday" aria-expanded="true" aria-controls="collapseMonday">
+                    Poniedziałek
+                </button>
+            </h2>
+            <div id="collapseMonday" class="accordion-collapse collapse show" aria-labelledby="headingMonday"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="subject"><span class="hour">1</span>Angielski</div>
+                    <div class="subject"><span class="hour">2</span>Biologia</div>
+                    <div class="subject"><span class="hour">3</span>Historia</div>
+                    <div class="subject"><span class="hour">4</span>Chemia</div>
+                    <div class="subject"><span class="hour">5</span>WF</div>
+                    <div class="subject"><span class="hour">6</span>Geografia</div>
+                    <div class="subject"><span class="hour">7</span>Polski</div>
+                    <div class="subject"><span class="hour">8</span>Fizyka</div>
+                    <div class="subject"><span class="hour">9</span>Matematyka</div>
+                    <div class="subject"><span class="hour">10</span>Angielski</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wtorek -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTuesday">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTuesday" aria-expanded="false" aria-controls="collapseTuesday">
+                    Wtorek
+                </button>
+            </h2>
+            <div id="collapseTuesday" class="accordion-collapse collapse" aria-labelledby="headingTuesday"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="subject"><span class="hour">0</span>Historia</div>
+                    <div class="subject"><span class="hour">1</span>Chemia</div>
+                    <div class="subject"><span class="hour">2</span>WF</div>
+                    <div class="subject"><span class="hour">3</span>Geografia</div>
+                    <div class="subject"><span class="hour">4</span>Polski</div>
+                    <div class="subject"><span class="hour">5</span>Fizyka</div>
+                    <div class="subject"><span class="hour">6</span>Matematyka</div>
+                    <div class="subject"><span class="hour">7</span>Angielski</div>
+                    <div class="subject"><span class="hour">8</span>Biologia</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Środa -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingWednesday">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseWednesday" aria-expanded="false" aria-controls="collapseWednesday">
+                    Środa
+                </button>
+            </h2>
+            <div id="collapseWednesday" class="accordion-collapse collapse" aria-labelledby="headingWednesday"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="subject"><span class="hour">2</span>Fizyka</div>
+                    <div class="subject"><span class="hour">3</span>Matematyka</div>
+                    <div class="subject"><span class="hour">4</span>Angielski</div>
+                    <div class="subject"><span class="hour">5</span>Biologia</div>
+                    <div class="subject"><span class="hour">6</span>Historia</div>
+                    <div class="subject"><span class="hour">7</span>Chemia</div>
+                    <div class="subject"><span class="hour">8</span>WF</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Czwartek -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThursday">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThursday" aria-expanded="false" aria-controls="collapseThursday">
+                    Czwartek
+                </button>
+            </h2>
+            <div id="collapseThursday" class="accordion-collapse collapse" aria-labelledby="headingThursday"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="subject"><span class="hour">0</span>Matematyka</div>
+                    <div class="subject"><span class="hour">1</span>Angielski</div>
+                    <div class="subject"><span class="hour">2</span>Biologia</div>
+                    <div class="subject"><span class="hour">3</span>Historia</div>
+                    <div class="subject"><span class="hour">4</span>Chemia</div>
+                    <div class="subject"><span class="hour">5</span>WF</div>
+                    <div class="subject"><span class="hour">6</span>Geografia</div>
+                    <div class="subject"><span class="hour">7</span>Polski</div>
+                    <div class="subject"><span class="hour">8</span>Fizyka</div>
+                    <div class="subject"><span class="hour">9</span>Matematyka</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Piątek -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFriday">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFriday" aria-expanded="false" aria-controls="collapseFriday">
+                    Piątek
+                </button>
+            </h2>
+            <div id="collapseFriday" class="accordion-collapse collapse" aria-labelledby="headingFriday"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="subject"><span class="hour">1</span>Chemia</div>
+                    <div class="subject"><span class="hour">2</span>WF</div>
+                    <div class="subject"><span class="hour">3</span>Geografia</div>
+                    <div class="subject"><span class="hour">4</span>Polski</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

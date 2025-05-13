@@ -3,7 +3,7 @@
   "display": "standalone",
   "name": "Mercury",
   "short_name": "Mercury",
-  "version": "io.mercury-school-journal.mercury",
+  "version": "io.mercury.Mercury",
   "description": "An application for managing the Mercury journal (frontend)",
   "author": "Pawil",
   "icons": [],
