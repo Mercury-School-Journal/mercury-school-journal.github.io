@@ -6,6 +6,12 @@
   "version": "io.mercury.Mercury",
   "description": "An application for managing the Mercury journal (frontend)",
   "author": "Pawil",
-  "icons": [],
+  "icons": [
+    {
+      "src": "www/img/logo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
   "start_url": "index.html"
 }

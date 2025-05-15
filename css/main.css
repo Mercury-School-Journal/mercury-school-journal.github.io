@@ -16,22 +16,27 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
+
 .container-fluid {
     height: 100%;
 }
+
 .row {
     height: 100%;
 }
+
 #sidebarMenu {
     height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
 }
+
 .hr-bottom {
     position: absolute;
     bottom: 4rem;
@@ -39,31 +44,37 @@
     margin: 0;
     border-color: white;
 }
+
 .dropdown {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 1rem;
 }
+
 #headerMenu {
-display: none;
+    display: none;
 }
-.dashboard{
+
+.dashboard {
     max-height: 100vh;
     overflow-y: auto;
     padding: 50px;
-    
+
 }
-.logo{
+
+.logo {
     color: white;
     text-align: center;
     padding-top: 15px;
-    
+
 }
+
 @media (max-width: 992px) {
     #sidebarMenu {
         display: none;
     }
+
     #headerMenu {
         display: flex;
         position: fixed;
@@ -76,16 +87,19 @@ display: none;
         align-items: center;
         padding: 0 1rem;
     }
+
     #headerMenu a {
         color: white;
         text-decoration: none;
         margin-right: 1rem;
     }
-    .dashboard{
+
+    .dashboard {
         margin-top: 56px;
         max-height: calc(100vh - 56px);
-     }
-     .logo{
+    }
+
+    .logo {
         padding-top: 0;
         color: white;
         text-align: center;

@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 402 401" width="400" height="399">
+    <title>avatar</title>
+    <style>
+        .s0 { fill: #ffffff } 
+    </style>
+    <rect width="100%" height="100%" fill="rgb(33, 37, 41)"/> <!-- Dodane tło -->
+    <g>
+        <path class="s0" d="m201.8 267.1c-103.4 0-187.7 59-192.5 132.9h385c-4.7-73.9-89.1-132.9-192.5-132.9z"/>
+        <path class="s0" d="m298.4 158c0 57.2-42.9 103.5-95.9 103.5-52.9 0-95.9-46.3-95.9-103.5 0-57.1 43-103.5 95.9-103.5 53 0 95.9 46.4 95.9 103.5z"/>
+    </g>
+</svg>

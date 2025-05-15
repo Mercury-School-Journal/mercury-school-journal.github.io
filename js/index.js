@@ -16,26 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-}
-function deleteCookie(name) {
-    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-}
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
+let db;
 $(document).ready(() => {
-    if((cordova.platformId != 'electron' && getCookie('token') === undefined) || (cordova.platformId === 'electron' && localStorage.getItem("token") === null))
+    if(localStorage.getItem("token") === null)
     {
         $('<link/>', {
             rel: 'stylesheet',

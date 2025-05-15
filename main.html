@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <div id="headerMenu">
-        <button class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+        <button class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+            aria-controls="offcanvasMenu">
             <i class="fas fa-bars"></i> <!-- Ikona trzech kresek (hamburger menu) -->
         </button>
         <!-- Offcanvas menu -->
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu"
-            aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
             <div class="offcanvas-header">
                 <h5 id="offcanvasMenuLabel">Menu</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
@@ -13,20 +13,23 @@
             </div>
             <div class="offcanvas-body">
                 <div id="headerMenu2">
-                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/dashboard.htm" data-bs-dismiss="offcanvas">Strona główna</a>
-                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/grades.htm" data-bs-dismiss="offcanvas">Oceny</a>
-                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/schedule.htm" data-bs-dismiss="offcanvas">Plan lekcji</a>
-                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/notes.htm" data-bs-dismiss="offcanvas">Uwagi</a>
+                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/dashboard.htm"
+                        data-name="dashboard" data-bs-dismiss="offcanvas">Strona główna</a>
+                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/grades.htm"
+                        data-name="grades" data-bs-dismiss="offcanvas">Oceny</a>
+                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/schedule.htm"
+                        data-name="schedule" data-bs-dismiss="offcanvas">Plan lekcji</a>
+                    <a href="#" class="text-dark d-block py-2 load-content" data-url="subpages/notes.htm"
+                        data-name="notes" data-bs-dismiss="offcanvas">Uwagi</a>
                     <div class="ms-auto dropdown">
-                        <a href="#"
-                            class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                        <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/pawi1.png" alt="" width="32" height="32"
-                                class="rounded-circle me-2">
+                            <img src="img/av.svg" alt="" width="32" height="32" class="rounded-circle me-2">
                             <strong class="userName"></strong>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Ustawienia</a></li>
+                            <li><a class="dropdown-item load-content" href="#"
+                                    data-url="subpages/settings.htm" data-bs-dismiss="offcanvas">Ustawienia</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -36,31 +39,35 @@
                 </div>
             </div>
         </div>
-        <h2 class="logo">Mercury</h2>
+        <h2 class="logo"><img src="img/logo.png" alt="avatar" width="32" class="rounded-circle me-2">Mercury</h2>
     </div>
     <div class="row">
         <!-- Sidebar -->
         <nav id="sidebarMenu" class="col-md-0 col-lg-3 d-lg-block bg-dark sidebar collapse position-relative">
-            <h2 class="logo">Mercury</h2>
+            <h2 class="logo"><img src="img/logo.png" alt="avatar" width="32" class="rounded-circle me-2">Mercury</h2>
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active text-white load-content" href="#" data-url="subpages/dashboard.htm">
+                        <a class="nav-link active text-white load-content" href="#" data-url="subpages/dashboard.htm"
+                            data-name="dashboard">
                             Strona główna
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white load-content" href="#" data-url="subpages/grades.htm">
+                        <a class="nav-link text-white load-content" href="#" data-url="subpages/grades.htm"
+                            data-name="grades">
                             Oceny
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white load-content" href="#" data-url="subpages/schedule.htm">
+                        <a class="nav-link text-white load-content" href="#" data-url="subpages/schedule.htm"
+                            data-name="schedule">
                             Plan lekcji
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white load-content" href="#" data-url="subpages/notes.htm">
+                        <a class="nav-link text-white load-content" href="#" data-url="subpages/notes.htm"
+                            data-name="notes">
                             Uwagi
                         </a>
                     </li>
@@ -72,12 +79,12 @@
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/pawi1.png" alt="" width="32" height="32"
-                        class="rounded-circle me-2">
+                    <img src="img/av.svg" alt="avatar" width="32" height="32" class="rounded-circle me-2">
                     <strong class="userName"></strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                    <li><a class="dropdown-item load-content" href="#" data-url="subpages/settings.htm">Ustawienia</a></li>
+                    <li><a class="dropdown-item load-content" href="#" data-url="subpages/settings.htm">Ustawienia</a>
+                    </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -87,7 +94,7 @@
         </nav>
         <!-- Main content area -->
         <main class=" col-lg-9 px-0 py-10 mx-0 align-items-center dashboard justify-content-center" id="content-area">
-        </main>
+                            </main>
+            </div>
     </div>
-</div>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>

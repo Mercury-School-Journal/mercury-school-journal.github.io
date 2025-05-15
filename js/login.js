@@ -42,12 +42,8 @@ $(document).ready(() => {
             contentType: 'application/json',
             data: JSON.stringify(data),
             success: (response) => {
-                if(cordova.platformId === 'electron'){
-                    localStorage.setItem('token',response.token);
-                    localStorage.setItem('token-expires', new Date(Date.now() + (7 * 24 * 60 * 60 * 1000)).toUTCString());
-                }
-                else
-                    setCookie('token',response.token,7);
+                localStorage.setItem('token',response.token);
+                localStorage.setItem('token-expires', new Date(Date.now() + (7 * 24 * 60 * 60 * 1000)).toUTCString());
                 localStorage.setItem("api", btoa($("#loginServer").val()));
                 sessionStorage.removeItem("isOnline");
                 localStorage.setItem("login", btoa($("#loginEmail").val()));
@@ -62,7 +58,3 @@ $(document).ready(() => {
         });
     });
 });
-// function validationOfPassword(password){
-//     const patern = /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/;
-//     return patern.test(password);
-// }

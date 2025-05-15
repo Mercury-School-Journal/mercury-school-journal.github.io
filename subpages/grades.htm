@@ -1,4 +1,45 @@
 <style>
+    .subject {
+        margin: 5px 0;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .accordion-button:hover {
+        background-color: #0056b3;
+    }
+
+    .rating-subject {
+        margin: 10px 0;
+        padding: 15px;
+        background-color: #e9ecef;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .rating-subject-name {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .ratings {
+
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+    }
+
     .rating-square {
         width: 30px;
         height: 30px;
@@ -8,10 +49,7 @@
         align-items: center;
         justify-content: center;
         margin-right: 5px;
-    }
-
-    .ratings {
-        display: flex;
+        border-radius: 5px;
     }
 </style>
 
@@ -21,45 +59,6 @@
             <h2>Lista ocen</h2>
         </div>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Przedmiot</th>
-                <th>Oceny</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Angielski</td>
-                <td>
-                    <div class="ratings">
-                        <div class="rating-square">2</div>
-                        <div class="rating-square">1</div>
-                        <div class="rating-square">3</div>
-                        <div class="rating-square">7</div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Niemiecki</td>
-                <td>
-                    <div class="ratings">
-                        <div class="rating-square">1</div>
-                        <div class="rating-square">2</div>
-                        <div class="rating-square">5</div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Polski</td>
-                <td>
-                    <div class="ratings">
-                        <div class="rating-square">4</div>
-                        <div class="rating-square">2</div>
-                        <div class="rating-square">0</div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="rating-container"></div>
 </div>
+<script src="js/grades.js"></script>

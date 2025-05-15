@@ -1,6 +1,3 @@
-<!-- <h2>Strona Główna</h2> -->
-
-
 <style>
     .subject {
         margin: 5px 0;
@@ -25,6 +22,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     .buttons-container {
         display: none;
         padding: 15px;
@@ -33,6 +31,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     .day-container.active {
         display: block;
     }
@@ -46,101 +45,26 @@
     .accordion-button:hover {
         background-color: #0056b3;
     }
-</style>
 
-<div class="container mt-5 px-4">
-    <div class="row">
-        <div class="col-12">
+    .rating-subject {
+        margin: 10px 0;
+        padding: 15px;
+        background-color: #e9ecef;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
 
-                <h2>Plan lekcji</h2>
+    .rating-subject-name {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
 
-                <div id="days">
-                    <div class="day-container active" id="monday">
-                        <h3>Poniedziałek</h3>
-                        <div class="subject"><span class="hour">0</span>Matematyka</div>
-                        <div class="subject"><span class="hour">1</span>Angielski</div>
-                        <div class="subject"><span class="hour">2</span>Biologia</div>
-                        <!-- Dodaj więcej lekcji według potrzeb -->
-                    </div>
-                    <div class="day-container" id="tuesday">
-                        <h3>Wtorek</h3>
-                        <div class="subject"><span class="hour">0</span>Historia</div>
-                        <div class="subject"><span class="hour">1</span>Chemia</div>
-                        <div class="subject"><span class="hour">2</span>WF</div>
-                        <!-- Dodaj więcej lekcji według potrzeb -->
-                    </div>
-                    <div class="day-container" id="wednesday">
-                        <h3>Środa</h3>
-                        <div class="subject"><span class="hour">0</span>Geografia</div>
-                        <div class="subject"><span class="hour">1</span>Polski</div>
-                        <div class="subject"><span class="hour">2</span>Fizyka</div>
-                        <!-- Dodaj więcej lekcji według potrzeb -->
-                    </div>
-                    <div class="day-container" id="thursday">
-                        <h3>Czwartek</h3>
-                        <div class="subject"><span class="hour">0</span>Matematyka</div>
-                        <div class="subject"><span class="hour">1</span>Angielski</div>
-                        <div class="subject"><span class="hour">2</span>Biologia</div>
-                        <!-- Dodaj więcej lekcji według potrzeb -->
-                    </div>
-                    <div class="day-container" id="friday">
-                        <h3>Piątek</h3>
-                        <div class="subject"><span class="hour">0</span>Historia</div>
-                        <div class="subject"><span class="hour">1</span>Chemia</div>
-                        <div class="subject"><span class="hour">2</span>WF</div>
-                        <!-- Dodaj więcej lekcji według potrzeb -->
-                    </div>
-                </div>
-                    <div class="buttons-container d-flex justify-content-between mb-3">
-                        <button class="btn btn-primary" id="prevDay">Poprzedni</button>
-                        <button class="btn btn-primary" id="nextDay">Następny</button>
-                    </div>
-        </div>
-
-        <script>
-            $(document).ready(function () {
-                let currentDayIndex = 0;
-                const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
-
-                function showDay(index) {
-                    $('.day-container').removeClass('active');
-                    $('#' + days[index]).addClass('active');
-                }
-
-                $('#prevDay').click(function () {
-                    currentDayIndex = (currentDayIndex === 0) ? days.length - 1 : currentDayIndex - 1;
-                    showDay(currentDayIndex);
-                });
-
-                $('#nextDay').click(function () {
-                    currentDayIndex = (currentDayIndex === days.length - 1) ? 0 : currentDayIndex + 1;
-                    showDay(currentDayIndex);
-                });
-            });
-        </script>
-
-
-
-        <style>
-.rating-subject {
-    margin: 10px 0;
-    padding: 15px;
-    background-color: #e9ecef;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.rating-subject-name {
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.ratings {
-    /* display: flex;
+    .ratings {
+        /* display: flex;
     flex-wrap: wrap;
     gap: 5px;
     background-color: #f8f9fa;
@@ -151,47 +75,58 @@
         display: flex;
         align-items: center;
         border-radius: 5px;
-}
-.rating-square {
-                width: 30px;
-                height: 30px;
-                background-color: #007bff;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 5px;
-                border-radius: 5px;
-            }
-        </style>
-<div class="col-12">
-    <h2>Ostatnie Oceny</h2>
+    }
 
-    <div class="rating-container">
-        <div class="rating-subject">
-            <div class="rating-subject-name">Angielski</div>
-            <div class="ratings">
-                <div class="rating-square">2</div>
-                <div class="rating-square">1</div>
-                <div class="rating-square">3</div>
-                <div class="rating-square">7</div>
+    .rating-square {
+        width: 30px;
+        height: 30px;
+        background-color: #007bff;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+        border-radius: 5px;
+    }
+</style>
+
+<div class="container mt-5 px-4">
+    <div class="row">
+        <div class="col-12">
+            <h2>Plan lekcji</h2>
+
+            <div id="days">
+                <div class="day-container active" id="monday">
+                    <h3>Poniedziałek</h3>
+                </div>
+                <div class="day-container" id="tuesday">
+                    <h3>Wtorek</h3>
+                </div>
+                <div class="day-container" id="wednesday">
+                    <h3>Środa</h3>
+                </div>
+                <div class="day-container" id="thursday">
+                    <h3>Czwartek</h3>
+                </div>
+                <div class="day-container" id="friday">
+                    <h3>Piątek</h3>
+                </div>
             </div>
-        </div>
-        <div class="rating-subject">
-            <div class="rating-subject-name">Niemiecki</div>
-            <div class="ratings">
-                <div class="rating-square">1</div>
-                <div class="rating-square">2</div>
-                <div class="rating-square">5</div>
-            </div>
-        </div>
-        <div class="rating-subject">
-            <div class="rating-subject-name">Polski</div>
-            <div class="ratings">
-                <div class="rating-square">4</div>
-                <div class="rating-square">2</div>
-                <div class="rating-square">0</div>
+
+            <div class="buttons-container d-flex justify-content-between mb-3">
+                <button class="btn btn-primary" id="prevDay">Poprzedni</button>
+                <button class="btn btn-primary" id="nextDay">Następny</button>
             </div>
         </div>
     </div>
+    <div class="col-12">
+        <h2>Ostatnie Oceny</h2>
+        <div class="rating-container">
+        </div>
+    </div>
+    <div class="col-12">
+        <hr style="margin-top: 25px;"><span class="lucky-number"></span>
+    </div>
 </div>
+
+<script src="js/dashboard.js"></script>
